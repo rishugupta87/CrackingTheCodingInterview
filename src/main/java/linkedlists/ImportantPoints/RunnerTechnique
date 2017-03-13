@@ -1,0 +1,10 @@
+The "runner" (or second pointer) technique is used in many linked list problems. The runner technique means
+ that you iterate through the linked list with two pointers simultaneously, with one ahead of the other.The "fast"
+ node might be ahead by a fixed amount, or it might be hopping multiple nodes for each one node that the "slow" node
+ iterates through.
+For example,suppose you had a linkedlist a - >a - >•••->a - >b - >b - >•••->b andyouwantedto 12n12n
+rearrangeitintoa - >b - >a - >b - >•.•->a - >b•Youdonotknowthelengthofthelinkedlist(butyou 1122 nn
+do know that the length is an even number).
+You could have one pointer pl (the fast pointer) move every two elements for everyone move that p2 makes. When p l hits
+the end of the linked list, p2 will be at the midpoint. Then, move p l back to the front and begin "weaving"the elements.
+On each iteration, p2 selects an element and inserts it after pl.

@@ -1,0 +1,9 @@
+One might ask which of these solutions is more efficient. Both run in 0 (N) time,
+ but what about the space efficiency? At first, we might want to claim that the second solution
+  is more space efficient.
+
+In a sense,that'scorrect.The first solutionuses 0(log N)recursivecalls(inabalancedtree),eachofwhich adds
+a new level to the stack. The second solution, which is iterative, does not require this extra space.
+However, both solutions require returning 0 (N) data. The extra 0 (log N) space usage from the recursive
+implementationisdwarfedbytheO(N) datathatmustbereturned.Sowhilethefirstsolutionmayactually use more data,
+they are equally efficient when it comes to "big 0:'

@@ -1,0 +1,4 @@
+- Always separate tasks into different methods
+- Remember the runner technique
+- we can create a new list in place just by updating head and tail . ex PartitionLinkedList
+- remeber to momic pass by value we can wrap it in a wrapper class.

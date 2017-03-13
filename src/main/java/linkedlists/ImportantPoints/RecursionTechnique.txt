@@ -1,0 +1,6 @@
+During recursion to mimic passing a value by reference we can use a wrapper class
+See KthFromLast and LinkedListSumForward examples
+
+class Value {
+   int value = 0;
+}

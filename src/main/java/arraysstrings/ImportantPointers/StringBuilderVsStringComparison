@@ -1,0 +1,37 @@
+Consider: Imagine you were concatenating a list of strings, as shown below.What would the running time of this code
+          be? For simplicity, assume that the strings are all the same length (call this x) and that there are n strings.
+
+String joinWords(String[] words) {
+  String sentence ="";
+  for (String w : words) {
+       sentence = sentence + w
+  }
+  return sentence
+}
+
+String is immutable in java, everytime we concatenate two strings we create a new string
+1st iteration: copy x chracters
+2nd iteration: copy 2x characters
+...
+nth iteration: copy nx characters
+Total time = x + 2x + 4x +..... + nx
+= O(xn^2)
+
+Can we do better ?
+we can use a stringbuilder . StringBuilder creates a resizable array of all strings, copying them back to string when required.
+
+public String makeSentence(String[] words) {
+    StringBuffer sentence = new StringBuffer();
+    for (String w : words) sentence.append(w);
+    return sentence.toString();
+}
+Complexity : O(n) -> (n words) x O(1) (amortized complexity for StringBuffer concatenation)
+
+
+What aboout if you use '+' to concat two strings instead of using concat method ?
+In the initial ages of java around jdk 1.2 every body used + to concatenate two String literals.
+When I say literal I mean it. Strings are immutable. That is, a String cannot be modified. Then what happens when we do
+String fruit = "Apple"; fruit = fruit + "World";
+In the above java code snippet for String concatenation, it looks like the String is modified.
+It is not happening. Until JDK 1.4 StringBuffer is used internally and from JDK 1.5 StringBuilder is used to concatenate.
+After concatenation the resultant StringBuffer or StringBuilder is changed to String.

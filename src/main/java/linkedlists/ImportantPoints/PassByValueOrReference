@@ -1,0 +1,50 @@
+Everything in Java are passed-by value.. In case of Array(Which is nothing but an Object),
+array reference is passed by value.. (Just like an object reference is passed by value)..
+When you pass an array to other method, actually the reference to that array is copied..
+Any changes in the content of array through that reference will affect the original array..
+But changing the reference to point to a new array will not change the existing reference in original method..
+
+public static void changeContent(int[] arr) {
+
+   // If we change the content of arr.
+   arr[0] = 10;  // Will change the content of array in main()
+}
+
+public static void changeRef(int[] arr) {
+   // If we change the reference
+   arr = new int[2];  // Will not change the array in main()
+   arr[0] = 15;
+}
+
+public static void main(String[] args) {
+    int [] arr = new int[2];
+    arr[0] = 4;
+    arr[1] = 5;
+
+    changeContent(arr);
+    System.out.println(arr[0]);  // Will print 10..
+    changeRef(arr);
+    System.out.println(arr[0]);  // Will still print 10..
+                                 // Change the reference doesn't reflect change here..
+}
+
+public static void main() {
+    LinkedList ll = new LinkedList(10);
+    ll.add(20);
+    ll.add(30);
+    test1(ll.head) //here the original head reference wont be affected 10->20->30
+    test2(ll.head) //although the reference wont change but this method will change the contents. 2->2->2
+}
+
+private static void test1(Node head) { // here you are just passing a copy of head and not the actual reference, java is pass by value only.
+    while(head != null) { //this head is actually a copy of the reference
+        head = head.next;
+    }
+}
+
+private static void test(Node head) {
+    while(head != null) {
+        head.data = 2; // however the copy of reference can change the value
+        head = head.next;
+    }
+}

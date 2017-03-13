@@ -1,0 +1,2 @@
+Can sort the characters in string using quick sort(in place)and iterate liearly looking if pairs are duplicate = O(nlogn)
+

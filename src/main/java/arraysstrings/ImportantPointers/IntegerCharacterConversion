@@ -1,0 +1,43 @@
+//Here, we used '0' because chars are actually represented by ASCII values. '0' is a char and represented by value of 48.
+//and in order to add these up, Java converted '0' to its ASCII value which is 48 and a is 1 so the sum is 49.
+int a = 1;
+char b = (char)(a + '0');
+System.out.println(b); //print character corresponding to ascii value = 49 which is '1'
+
+//will print out the char with ascii value 1 (start-of-heading char, which isn't printable).
+int a1 = 1;
+char b1 = (char) a1;
+System.out.println(b1);
+
+//will print out the char with ascii value 49 (one corresponding to '1')
+int a2 = '1';
+char b2 = (char) a2;
+System.out.println(b2);
+
+//If you want to convert a digit (0-9), you can add 48 to it and cast, or something like Character.forDigit(a, 10)
+int a3 = 5;
+char b3 = (char) (a3 + '0'); //= char(53) = character corresponding to ascii value 53 which is = 5
+System.out.println(b3);
+
+############################################################################################################################
+Ascii table: http://www.asciitable.com/
+ASCII stands for American Standard Code for Information Interchange. Computers can only understand numbers,
+so an ASCII code is the numerical representation of a character such as 'a' or '@' or an action of some sort.
+ASCII was developed a long time ago and now the non-printing characters are rarely used for their original purpose.
+Below is the ASCII character table and this includes descriptions of the first 32 non-printing characters.
+ASCII was actually designed for use with teletypes and so the descriptions are somewhat obscure. If someone says
+they want your CV however in ASCII format, all this means is they want 'plain' text with no formatting such as tabs,
+bold or underscoring - the raw format that any computer can understand. This is usually so they can easily import
+the file into their own applications without issues. Notepad.exe creates ASCII text, or in MS Word you can
+save a file as 'text only'
+
+Ascii value can be between 0 -127
+Extended value till 255
+= 0 - 255  = 256 ascii characters possible.
+######################################################################################################
+Unicode: http://www.unicodetables.com/
+Ascii was very simplistic, and so was extended by adding 'extended' sets by various manufacturers.
+Apart from being confusing this was still restricted to 256 characters. Now computers are more widely
+established around the world the need to show other characters such as Japanese and Chinese languages along with
+various symbols became more important. Unicode is an attempt to standardise every character possible and the latest version (4)
+is shown below. Tables are in PDF format so you will need Adobe Acrobat Reader to view them.
