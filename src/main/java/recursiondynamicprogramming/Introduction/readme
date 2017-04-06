@@ -1,0 +1,10 @@
+- Recursive solutions, by definition, are built off of solutions to subproblems.
+There are many ways you might divide a problem into subproblems.Three of the most common approaches
+ to develop an algorithm are bottom-up, top-down, and half-and-half.
+
+ -- Bottom up: Is where you first look at the "smaller" subproblems and then solve the larger subproblems using the
+    solution to the smaller problem.
+ -- Top down: Solve the problem in a natural manner and check if you have calculated the solution to the subproblem before.
+
+-Dynamic programming is mostly just a matter of taking a recursive algorithm and finding the overlapping
+subproblems (that is, the repeated calls) . You then cache those results for future recursive calls.
