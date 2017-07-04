@@ -1,5 +1,8 @@
 package Java.Q13_07_Lambda_Expressions;
 
+import Java.Q13_08_Lambda_Random.QuestionB;
+import Java.Q13_08_Lambda_Random.QuestionC;
+
 import java.util.ArrayList;
 
 public class Tester {
@@ -12,8 +15,8 @@ public class Tester {
  		
  		String continent = "North America";
  		int popA = QuestionA.getPopulation(countries, continent);
- 		int popB = QuestionB.getPopulation(countries, continent);
- 		int popC = QuestionC.getPopulation(countries, continent);
+ 		int popB = Java.Q13_07_Lambda_Expressions.QuestionB.getPopulation(countries, continent);
+ 		int popC = Java.Q13_07_Lambda_Expressions.QuestionC.getPopulation(countries, continent);
  		
  		if (popA == popB && popB == popC) {
  			System.out.println("Population: " + popA);

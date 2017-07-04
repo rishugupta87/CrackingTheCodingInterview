@@ -32,7 +32,7 @@ public class GenerateParenthesis {
             return Collections.emptySet();
         }
         if(n == 1) {
-            Set<String> set = new HashSet<>();
+            Set<String> set = new HashSet<String>();
             set.add("()");
             return set;
         }
@@ -43,7 +43,7 @@ public class GenerateParenthesis {
     }
 
     private static Set<String> insertAtPrevSet(final Set<String> previousSet) {
-        Set<String> result = new HashSet<>();
+        Set<String> result = new HashSet<String>();
         for(final String previous : previousSet) {
             result.add("()" + previous);
             result.add(previous + "()");

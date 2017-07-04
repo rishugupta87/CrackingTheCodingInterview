@@ -25,7 +25,7 @@ public class GenerateParenthesis_Efficient {
         int noOfOpen = 0;
         int noOfClose = 0;
 
-        List<String> res = new ArrayList<>();
+        List<String> res = new ArrayList<String>();
         StringBuilder sb = new StringBuilder();
 
         //generate(res, noOfOpen, noOfClose, n, new String());

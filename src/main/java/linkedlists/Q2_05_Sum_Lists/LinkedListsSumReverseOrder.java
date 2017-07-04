@@ -36,8 +36,7 @@ public class LinkedListsSumReverseOrder {
         int carry = 0;
 
         while (curr1 != null || curr2 != null) {
-            int sum = 0;
-            sum += carry;
+            int sum = carry;
             if(curr1 != null) {
                 sum += curr1.data;
                 curr1 = curr1.next;

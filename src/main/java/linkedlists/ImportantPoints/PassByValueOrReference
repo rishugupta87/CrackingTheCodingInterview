@@ -42,7 +42,7 @@ private static void test1(Node head) { // here you are just passing a copy of he
     }
 }
 
-private static void test(Node head) {
+private static void test2(Node head) {
     while(head != null) {
         head.data = 2; // however the copy of reference can change the value
         head = head.next;

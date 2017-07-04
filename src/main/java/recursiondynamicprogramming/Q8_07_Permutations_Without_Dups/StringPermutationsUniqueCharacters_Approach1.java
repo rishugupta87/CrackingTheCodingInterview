@@ -26,7 +26,7 @@ public class StringPermutationsUniqueCharacters_Approach1 {
 
     private static ArrayList<String> generatePermutations(final String str) {
         if(str.length() == 1) {
-            ArrayList<String> permutations = new ArrayList<>();
+            ArrayList<String> permutations = new ArrayList<String>();
             permutations.add(String.valueOf(str.charAt(0)));
             return permutations;
         }
@@ -40,7 +40,7 @@ public class StringPermutationsUniqueCharacters_Approach1 {
 
     private static ArrayList<String> insertCharacterAtEachRemainPermutation(final char first,
                                                                        final List<String> remainPermutations) {
-        ArrayList<String> modifiedPermutations = new ArrayList<>();
+        ArrayList<String> modifiedPermutations = new ArrayList<String>();
 
         /**
          *

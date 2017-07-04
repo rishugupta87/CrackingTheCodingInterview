@@ -9,8 +9,8 @@ public class QuestionC {
  		Stream<Integer> populations = countries.stream().map(c ->
  			c.getContinent().equals(continent) ? c.getPopulation() : 0);
  		return populations.reduce(0, (a, b) -> a + b);
-	}	
-	
+	}
+
  	public static void main(String... args) {
  		ArrayList<Country> countries = new ArrayList<Country>();
  		countries.add(new Country("United States", "North America", 5));

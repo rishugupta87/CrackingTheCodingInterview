@@ -9,12 +9,12 @@ public class QuestionB {
  		Stream<Country> sublist = countries.stream().filter( country -> {
  			return country.getContinent().equals(continent);
  		});
- 		
+
  		Stream<Integer> populations = sublist.map(c -> c.getPopulation());
  		int population = populations.reduce(0, (a, b) -> a + b);
  		return population;
-	}	
-	
+	}
+
  	public static void main(String... args) {
  		ArrayList<Country> countries = new ArrayList<Country>();
  		countries.add(new Country("United States", "North America", 5));

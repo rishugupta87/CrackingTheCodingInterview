@@ -26,7 +26,7 @@ public class GroupAnagrams {
             map.get(sortedstring).add(s);
         }
 
-        List<List<String>> result = new ArrayList<>();
+        List<List<String>> result = new ArrayList<List<String>>();
         for(final String s : map.keySet()) {
             result.add(map.get(s));
         }
